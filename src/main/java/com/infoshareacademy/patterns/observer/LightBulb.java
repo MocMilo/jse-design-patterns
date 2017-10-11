@@ -1,8 +1,12 @@
 package com.infoshareacademy.patterns.observer;
 
-public class LightBulb {
+public class LightBulb implements IObserver {
 
-    public void light() {
+    public void execute(){
+        this.light();
+    }
+
+    private void light() {
         System.out.println("Light bulb switched on!");
     }
 }

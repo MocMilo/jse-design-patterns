@@ -1,13 +1,20 @@
 package com.infoshareacademy.patterns.command;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-        HostCommands hostCommands = new HostCommands();
+        List<Command> commands = Arrays.asList(
+            new ShowHelpCommand(),
+            new ListDirectoryCommand(),
+            new ShowHostNameCommand(),
+            new ShowHostIpCommand()
+        );
 
-        hostCommands.shopHelp();
-        hostCommands.showHostName();
-        hostCommands.shopHostIp();
-        hostCommands.listDirectory();
+        for (Command command : commands) {
+            command.execute();
+        }
     }
 }

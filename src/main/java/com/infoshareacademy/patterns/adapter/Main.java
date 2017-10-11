@@ -1,6 +1,5 @@
 package com.infoshareacademy.patterns.adapter;
 
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -10,9 +9,8 @@ public class Main {
         XmlParser11 xmlParser11 = new XmlParser11();
         Stream<String> xmlStream = Stream.of("<start>", "content", "</start>");
 
-        String xmlString = xmlStream.collect(Collectors.joining());
-
-        Xml xml = xmlParser11.parse(xmlString);
+        XmlParser2 xmlParser2 = new XmlParser11Adapter(xmlParser11);
+        Xml xml = xmlParser2.parse(xmlStream);
         System.out.println(xml);
 
     }

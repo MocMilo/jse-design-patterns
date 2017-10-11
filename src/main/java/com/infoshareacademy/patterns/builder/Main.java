@@ -4,14 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        XmlGenerator xmlGenerator = new XmlGenerator(XmlGenerator.Type.PRETTY);
-        xmlGenerator.startTag("start");
-        xmlGenerator.addContent("content");
-        xmlGenerator.startTag("foo");
-        xmlGenerator.addContent("foo_content");
-        xmlGenerator.endTag("foo");
-        xmlGenerator.endTag("start");
-        String xml = xmlGenerator.buildXml();
+        SimpleXmlBuilder simpleXmlBuilder = new MinifiedXmlBuilder();
+        simpleXmlBuilder.startTag("start");
+        simpleXmlBuilder.addContent("content");
+        simpleXmlBuilder.startTag("foo");
+        simpleXmlBuilder.addContent("foo_content");
+        simpleXmlBuilder.endTag("foo");
+        simpleXmlBuilder.endTag("start");
+        String xml = simpleXmlBuilder.buildXml();
         System.out.println(xml);
 
     }
