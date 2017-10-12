@@ -5,9 +5,9 @@ package com.infoshareacademy.patterns.observer;
  */
 public interface IObservable {
 
-    void notyfyObservers();
-    void addObserver(IObserver o);
-    void removeObserver(IObserver o);
+    void notifyObservers();
+    void addObserver(IObserver observer);
+    void removeObserver(IObserver observer);
 
 
 }

@@ -7,24 +7,24 @@ public class Main {
         LightBulb lightBulb = new LightBulb();
         DoorBell doorBell = new DoorBell();
 
-        ToggleSwitch toogleSwitch = new ToggleSwitch();
-        toogleSwitch.addObserver(lightBulb);
-        toogleSwitch.addObserver(doorBell);
+        ToggleSwitch toggleSwitch = new ToggleSwitch();
+        toggleSwitch.addObserver(lightBulb);
+        toggleSwitch.addObserver(doorBell);
 
         WallSwitch wallSwitch = new WallSwitch();
         wallSwitch.addObserver(lightBulb);
         wallSwitch.addObserver(doorBell);
 
-        // no current
-        toogleSwitch.setCurrentPresent(false);
+        // no electric current
+        toggleSwitch.setCurrentPresent(false);
         wallSwitch.setCurrentPresent(false);
-        toogleSwitch.push();
+        toggleSwitch.push();
         wallSwitch.push();
 
-        // current present
-        toogleSwitch.setCurrentPresent(true);
+        // electric current present
+        toggleSwitch.setCurrentPresent(true);
         wallSwitch.setCurrentPresent(true);
-        toogleSwitch.push();
+        toggleSwitch.push();
         wallSwitch.push();
 
         // remove one observer from wallSwitch

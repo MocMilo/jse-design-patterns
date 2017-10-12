@@ -13,8 +13,8 @@ public class Main {
             new ShowHostIpCommand()
         );
 
-        for (Command command : commands) {
-            command.execute();
+        for (Command item : commands) {
+            item.execute();
         }
     }
 }

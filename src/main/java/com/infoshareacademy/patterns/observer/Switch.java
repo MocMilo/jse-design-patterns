@@ -14,7 +14,7 @@ public class Switch implements IObservable {
     private boolean isCurrentPresent;
 
     @Override
-    public void notyfyObservers() {
+    public void notifyObservers() {
         for (IObserver item : observers) {
             if (this.isCurrentPresent) {
                 item.execute();
@@ -24,16 +24,16 @@ public class Switch implements IObservable {
         }
     }
     @Override
-    public void addObserver(IObserver o) {
-        observers.add(o);
+    public void addObserver(IObserver observer) {
+        observers.add(observer);
     }
 
     @Override
-    public void removeObserver(IObserver o) {
-        observers.remove(o);
+    public void removeObserver(IObserver observer) {
+        observers.remove(observer);
     }
 
     public void push() {
-    notyfyObservers();
+    notifyObservers();
     }
 }
