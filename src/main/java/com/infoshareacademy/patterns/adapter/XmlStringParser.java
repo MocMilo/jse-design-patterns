@@ -1,6 +1,6 @@
 package com.infoshareacademy.patterns.adapter;
 
-public class XmlParser11 implements XmlParser1 {
+public class XmlStringParser implements StringParsable {
 
     @Override
     public Xml parse(String xml) {

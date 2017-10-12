@@ -3,12 +3,12 @@ package com.infoshareacademy.patterns.adapter;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class XmlParser11Adapter implements XmlParser2 {
+public class StringParserAdapter implements StreamParsable {
 
-    private XmlParser11 xmlParser11;
+    private XmlStringParser xmlStringParser;
 
-    public XmlParser11Adapter(XmlParser11 xmlParser11) {
-        this.xmlParser11 = xmlParser11;
+    public StringParserAdapter(XmlStringParser xmlStringParser) {
+        this.xmlStringParser = xmlStringParser;
     }
 
     @Override
@@ -18,6 +18,6 @@ public class XmlParser11Adapter implements XmlParser2 {
         String xmlString = xml.collect(Collectors.joining());
 
         // using string parser to return xml
-        return xmlParser11.parse(xmlString);
+        return xmlStringParser.parse(xmlString);
     }
 }

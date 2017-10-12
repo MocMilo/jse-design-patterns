@@ -1,5 +1,5 @@
 package com.infoshareacademy.patterns.adapter;
 
-public interface XmlParser1 {
+public interface StringParsable {
     Xml parse(String xml);
 }
