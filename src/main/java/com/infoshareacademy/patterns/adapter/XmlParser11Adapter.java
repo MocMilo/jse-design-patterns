@@ -13,7 +13,11 @@ public class XmlParser11Adapter implements XmlParser2 {
 
     @Override
     public Xml parse(Stream<String> xml) {
+
+        // changing stream to string
         String xmlString = xml.collect(Collectors.joining());
+
+        // using string parser to return xml
         return xmlParser11.parse(xmlString);
     }
 }
