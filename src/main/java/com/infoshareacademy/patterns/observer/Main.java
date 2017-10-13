@@ -5,13 +5,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        LightBulb lightBulb = new LightBulb();
-        DoorBell doorBell = new DoorBell();
+        // OBSERVER-PATTERN
 
+        // When current 'observed object' changes it's state, other objects
+        // (observers) do execute their actions (algorithms).
+
+        // Example: Switch is observed by door bell and light bulb.
+        // When switch is turned on: bell rings and bulb lights.
+
+        // observed:
         ToggleSwitch toggleSwitch = new ToggleSwitch();
         WallSwitch wallSwitch = new WallSwitch();
 
-        System.out.println("all observers added to observables...");
+        // observers:
+        LightBulb lightBulb = new LightBulb();
+        DoorBell doorBell = new DoorBell();
+
+        System.out.println("all observers added to observed objects lists...");
         toggleSwitch.addObserver(lightBulb);
         toggleSwitch.addObserver(doorBell);
         wallSwitch.addObserver(lightBulb);
