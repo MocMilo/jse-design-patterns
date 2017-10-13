@@ -2,7 +2,8 @@ package com.infoshareacademy.patterns.factory;
 
 public class ConfigurationReader {
 
-    public void load(String filename) {
+    public Configuration load(String filename) {
+
         String type = determineFileType(filename);
 
         SerializerFactory serializerFactory = new SerializerFactory();
@@ -10,6 +11,7 @@ public class ConfigurationReader {
 
         Configuration configuration = (Configuration) serializer.deserialize(filename);
         System.out.println("Deserialized config: " + configuration);
+        return configuration;
     }
 
     private String determineFileType(String filename) {
