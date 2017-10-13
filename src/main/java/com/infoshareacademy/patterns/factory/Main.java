@@ -6,7 +6,7 @@ public class Main {
 
         // FACTORY-PATTERN
 
-        // Application needs to support several 'object creation algorithms' of current Type
+        // Application needs to support several 'object creation algorithms' to create current Type
 
         // example:
         // application needs to create Configuration object from file, but needs different

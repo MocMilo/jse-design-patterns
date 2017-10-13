@@ -7,7 +7,7 @@ public class DoorBell implements IObserver {
     }
 
     private void ring() {
-        System.out.println("Doorbell rings!");
+        System.out.println(" * Doorbell rings!");
     }
 }
 

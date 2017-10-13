@@ -4,33 +4,28 @@ package com.infoshareacademy.patterns.observer;
 public class Main {
 
     public static void main(String[] args) {
+
         LightBulb lightBulb = new LightBulb();
         DoorBell doorBell = new DoorBell();
 
         ToggleSwitch toggleSwitch = new ToggleSwitch();
+        WallSwitch wallSwitch = new WallSwitch();
+
+        System.out.println("all observers added to observables...");
         toggleSwitch.addObserver(lightBulb);
         toggleSwitch.addObserver(doorBell);
-
-        WallSwitch wallSwitch = new WallSwitch();
         wallSwitch.addObserver(lightBulb);
         wallSwitch.addObserver(doorBell);
 
-        // no electric current
-        toggleSwitch.setCurrentPresent(false);
-        wallSwitch.setCurrentPresent(false);
+        System.out.println("push toggle and wall switch...");
         toggleSwitch.push();
         wallSwitch.push();
 
-        // electric current present
-        toggleSwitch.setCurrentPresent(true);
-        wallSwitch.setCurrentPresent(true);
-        toggleSwitch.push();
-        wallSwitch.push();
-
-        // remove one observer from wallSwitch
+        System.out.println("now remove doorBell from observers of wall switch...");
         wallSwitch.removeObserver(doorBell);
+
+        System.out.println("now once again: push toggle and wall switch...");
+        toggleSwitch.push();
         wallSwitch.push();
-
-
     }
 }

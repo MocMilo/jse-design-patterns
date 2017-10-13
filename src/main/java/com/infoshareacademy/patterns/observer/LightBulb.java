@@ -7,6 +7,6 @@ public class LightBulb implements IObserver {
     }
 
     private void light() {
-        System.out.println("Light bulb switched on!");
+        System.out.println(" * Light bulb switched on!");
     }
 }

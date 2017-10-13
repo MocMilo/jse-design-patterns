@@ -7,20 +7,10 @@ public class Switch implements IObservable {
 
     List<IObserver> observers = new ArrayList<>();
 
-    public void setCurrentPresent(boolean currentPresent) {
-        isCurrentPresent = currentPresent;
-    }
-
-    private boolean isCurrentPresent;
-
     @Override
     public void notifyObservers() {
         for (IObserver item : observers) {
-            if (this.isCurrentPresent) {
-                item.execute();
-            } else {
-                System.out.println("no power supply!");
-            }
+                 item.execute();
         }
     }
     @Override
