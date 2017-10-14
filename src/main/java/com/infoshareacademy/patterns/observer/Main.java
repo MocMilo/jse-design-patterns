@@ -21,7 +21,7 @@ public class Main {
         LightBulb lightBulb = new LightBulb();
         DoorBell doorBell = new DoorBell();
 
-        System.out.println("all observers added to observed objects lists...");
+        System.out.println("all observers added to list of observers stored inside Switch");
         toggleSwitch.addObserver(lightBulb);
         toggleSwitch.addObserver(doorBell);
         wallSwitch.addObserver(lightBulb);

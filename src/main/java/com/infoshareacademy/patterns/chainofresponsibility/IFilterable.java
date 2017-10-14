@@ -5,5 +5,5 @@ package com.infoshareacademy.patterns.chainofresponsibility;
  */
 public interface IFilterable {
 
-  void processMail(Mail mail);
+  void processMail(Mail Mail);
 }

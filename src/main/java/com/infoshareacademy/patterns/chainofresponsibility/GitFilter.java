@@ -6,11 +6,11 @@ package com.infoshareacademy.patterns.chainofresponsibility;
 public class GitFilter extends Filter implements IFilterable {
 
     @Override
-    public void processMail(Mail mail){
-        filterGitHub(mail);
+    public void processMail(Mail Mail){
+        filterGitHub(Mail);
     }
 
-    private void filterGitHub(Mail mail) {
-        System.out.println("Filtering github");
+    private void filterGitHub(Mail Mail) {
+        System.out.println("GITHUB filtering algorithm");
     }
 }

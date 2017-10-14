@@ -2,13 +2,13 @@ package com.infoshareacademy.patterns.chainofresponsibility;
 
 public class MailBox {
 
-    private Filter mailfilter;
+    private Filter mailFilter;
 
-    public void setMailfilter(Filter mailfilter) {
-        this.mailfilter = mailfilter;       // setting first filter in chain
+    public void setMailFilter(Filter mailFilter) {
+        this.mailFilter = mailFilter;       // setting first filter in chain
     }
 
-    public void receiveMail(Mail mail) {
-        mailfilter.processFilteringMails(mail);
+    public void receiveMail(Mail Mail) {
+        mailFilter.processFilteringMails(Mail);
     }
 }

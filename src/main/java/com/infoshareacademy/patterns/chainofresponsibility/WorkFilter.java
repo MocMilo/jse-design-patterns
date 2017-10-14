@@ -6,10 +6,10 @@ package com.infoshareacademy.patterns.chainofresponsibility;
 public class WorkFilter extends Filter implements IFilterable {
 
     @Override
-    public void processMail(Mail mail){
-        filterWork(mail);
+    public void processMail(Mail Mail){
+        filterWork(Mail);
     }
-    private void filterWork(Mail mail) {
-        System.out.println("Filtering work");
+    private void filterWork(Mail Mail) {
+        System.out.println("WORK filtering algorithm");
     }
 }

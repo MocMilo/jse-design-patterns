@@ -6,12 +6,12 @@ package com.infoshareacademy.patterns.chainofresponsibility;
 public class SpamFilter extends Filter implements IFilterable {
 
     @Override
-    public void processMail(Mail mail){
-        filterSpam(mail);
+    public void processMail(Mail Mail){
+        filterSpam(Mail);
     }
 
-    private void filterSpam(Mail mail) {
-        System.out.println("Filtering spam");
+    private void filterSpam(Mail Mail) {
+        System.out.println("SPAM filtering algorithm");
     }
 
 

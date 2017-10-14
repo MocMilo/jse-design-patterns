@@ -11,13 +11,16 @@ public abstract class Filter implements IFilterable {
         this.succesorFilter = successorFilter;
     }
 
-    public void processFilteringMails(Mail mail){
-        processMail(mail);                          // using own filtering method
-        succesorFilter.processFilteringMails(mail); // delegating filter processing to successor
+    public void processFilteringMails(Mail Mail){
+
+        processMail(Mail);                          // using own filtering method
+
+        if(succesorFilter!=null)                    // prevents nullPointerEx in the last filter in chain
+        succesorFilter.processFilteringMails(Mail); // delegating filter processing to successor
     }
 
     @Override
-    public void processMail(Mail mail) {
-     System.out.print("Generic filter");
+    public void processMail(Mail Mail) {
+     System.out.print("base filtering algorithm");
     }
 }

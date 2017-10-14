@@ -6,6 +6,7 @@ public class Main {
 
         // FACTORY-PATTERN
 
+        // solves issue:
         // Application needs to support several 'object creation algorithms' to create current Type
 
         // example:

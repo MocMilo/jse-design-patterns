@@ -3,7 +3,7 @@ package com.infoshareacademy.patterns.observer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Switch implements IObservable {
+public abstract class Switch implements IObservable {
 
     List<IObserver> observers = new ArrayList<>();
 

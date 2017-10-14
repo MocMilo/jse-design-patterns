@@ -6,12 +6,12 @@ package com.infoshareacademy.patterns.chainofresponsibility;
 public class NewsFilter extends Filter implements IFilterable {
 
     @Override
-    public void processMail(Mail mail){
-        filterNews(mail);
+    public void processMail(Mail Mail){
+        filterNews(Mail);
     }
 
-    private void filterNews(Mail mail) {
-        System.out.println("Filtering news");
+    private void filterNews(Mail Mail) {
+        System.out.println("NEWS filtering algorithm");
     }
 
 }

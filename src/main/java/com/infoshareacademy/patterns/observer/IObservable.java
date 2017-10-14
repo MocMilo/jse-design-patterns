@@ -5,6 +5,8 @@ package com.infoshareacademy.patterns.observer;
  */
 public interface IObservable {
 
+    // this interface is just to enforce methods implementation in 'Observed object'
+
     void notifyObservers();
     void addObserver(IObserver observer);
     void removeObserver(IObserver observer);
